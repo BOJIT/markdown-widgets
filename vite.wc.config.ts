@@ -6,6 +6,11 @@ import glob from 'fast-glob';
 const files = await glob(['src/lib/*.wc.svelte']);
 console.log(files);
 
+const vendorModules = [
+    "svelte",
+    // "@sveltejs/vite-plugin-svelte",
+];
+
 export default defineConfig({
     build: {
         rollupOptions: {
@@ -15,8 +20,10 @@ export default defineConfig({
             },
             output: {
                 inlineDynamicImports: false,
+                // assetFileNames: "components/[name].[ext]",
+                chunkFileNames: "[name].js",
                 manualChunks: {
-                    svelte: ['svelte'],
+                    vendor: vendorModules,
                 },
             },
         },
