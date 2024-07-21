@@ -6,6 +6,7 @@ node_modules
 /.svelte-kit
 /build
 /dist
+/dist-wc
 
 # OS
 .DS_Store
@@ -23,3 +24,4 @@ vite.config.ts.timestamp-*
 
 .vscode/settings.json
 .vscode/svelte.code-snippets
+.vscode/javascript.code-snippets

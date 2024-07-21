@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2024
  *
 -->
-<svelte:options customElement="my-element" />
+<svelte:options customElement="cad-viewer" />
 
 <script lang="ts">
     /*-------------------------------- Imports -------------------------------*/

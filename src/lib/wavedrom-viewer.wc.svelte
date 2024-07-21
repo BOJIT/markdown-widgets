@@ -7,6 +7,7 @@
  * @copyright Copyright (c) 2024
  *
 -->
+<svelte:options customElement="wavedrom-viewer" />
 
 <script lang="ts">
     /*-------------------------------- Imports -------------------------------*/

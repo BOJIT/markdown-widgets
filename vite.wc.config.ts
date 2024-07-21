@@ -1,16 +1,18 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+// import { resolve } from 'path';
+import glob from 'fast-glob';
+
+const files = await glob(['src/lib/*.wc.svelte']);
+console.log(files);
 
 export default defineConfig({
     build: {
-        lib: {
-            entry: resolve(__dirname, 'src/lib/index.ts'),
-            name: 'Components',
-            fileName: 'components',
-            formats: ['es'],
-        },
         rollupOptions: {
+            input: {
+                bundleA: 'src/lib/cad-viewer.wc.svelte',
+                bundleB: 'src/lib/wavedrom-viewer.wc.svelte',
+            },
             output: {
                 inlineDynamicImports: false,
                 manualChunks: {
